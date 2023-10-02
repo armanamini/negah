@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 
-interface btnStateInterface {
-  isChecked:Boolean
-}
+
 
 function ToggleButton() {
-  const [isChecked, setIsChecked] = useState<btnStateInterface>({isChecked:false});
+  const [isChecked, setIsChecked] = useState({isChecked:false});
 
   const handleToggle = () => {
     setIsChecked({ isChecked: !isChecked.isChecked });

@@ -10,12 +10,12 @@ import ToggleButton from "./assets/ToggleBtn";
 function App() {
   const [userBtn, setUserBtn] = useState({ kids: false });
   const [showUserLocation, setShowUserLocation] = useState(false);
-  const mapRef = useRef<NeshanMapRef | null>(null);
-  const userLocationOverlayRef = useRef<Overlay>(
+  const mapRef = useRef(null);
+  const userLocationOverlayRef = useRef(
     new Overlay({ element: document.createElement("div") })
   );
 
-  const onInit = (map: ol.Map) => {
+  const onInit = (map) => {
     // ...
 
     // Create an overlay for the user's location
